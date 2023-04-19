@@ -11,6 +11,14 @@
 </script>
 
 <style>
+  /* Center the content */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
   button {
     padding: 10px;
     font-size: 16px;
@@ -20,13 +28,24 @@
     border-radius: 5px;
     cursor: pointer;
   }
+
+  .container {
+    text-align: center;
+  }
+
+  .note {
+    color: red;
+  }
+
+  .interval {
+    color: blue;
+  }
 </style>
 
-<div>
+<div class="container">
   <button on:click={generateRandomNoteAndInterval}>Generate random note and interval</button>
   {#if randomNote && randomInterval}
-    <h1>The random note is: {randomNote}</h1>
-    <h2>The random interval is: {randomInterval}</h2>
+    <h1>The random note is: <span class="note">{randomNote}</span></h1>
+    <h2>The random interval is: <span class="interval">{randomInterval}</span></h2>
   {/if}
 </div>
-
