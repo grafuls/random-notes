@@ -8,6 +8,8 @@
     randomNote = notes[Math.floor(Math.random() * notes.length)];
     randomInterval = intervals[Math.floor(Math.random() * intervals.length)];
   }
+
+  generateRandomNoteAndInterval();
 </script>
 
 <style>
@@ -43,7 +45,7 @@
 </style>
 
 <div class="container">
-  <button on:click={generateRandomNoteAndInterval}>Generate random note and interval</button>
+  <button on:click={generateRandomNoteAndInterval}>Generate new random note and interval</button>
   {#if randomNote && randomInterval}
     <h1>The random note is: <span class="note">{randomNote}</span></h1>
     <h2>The random interval is: <span class="interval">{randomInterval}</span></h2>
